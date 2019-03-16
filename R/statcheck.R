@@ -65,7 +65,7 @@ statcheck <-
         # p-values
         # Get location of p-values in text:
         pLoc <-
-          gregexpr("([^a-z]ns)|(p\\s?[<>=]\\s?\\d?\\.\\d+e?-?\\d*)",
+          gregexpr("([^a-z]ns)|(p\\s?[<>=]?\\s?\\d?\\.\\d+e?-?\\d*)",
                    txt,
                    ignore.case = TRUE)[[1]]
         
@@ -141,7 +141,7 @@ statcheck <-
           # Get location of t-values in text:
           tLoc <-
             gregexpr(
-              "t\\s?\\(\\s?\\d*\\.?\\d+\\s?\\)\\s?[<>=]\\s?[^a-z\\d]{0,3}\\s?\\d*,?\\d*\\.?\\d+\\s?,\\s?(([^a-z]ns)|(p\\s?[<>=]\\s?\\d?\\.\\d+e?-?\\d*))",
+              "t\\s?\\(\\s?\\d*\\.?\\d+\\s?\\)\\s?[<>=]?\\s?[^a-z\\d]{0,3}\\s?\\d*,?\\d*\\.?\\d+\\s?,\\s?(([^a-z]ns)|(p\\s?[<>=]?\\s?\\d?\\.\\d+e?-?\\d*))",
               txt,
               ignore.case = TRUE
             )[[1]]
@@ -270,7 +270,7 @@ statcheck <-
           # 1 --> l or I
           FLoc <-
             gregexpr(
-              "F\\s?\\(\\s?\\d*\\.?(I|l|\\d+)\\s?,\\s?\\d*\\.?\\d+\\s?\\)\\s?[<>=]\\s?\\d*,?\\d*\\.?\\d+\\s?,\\s?(([^a-z]ns)|(p\\s?[<>=]\\s?\\d?\\.\\d+e?-?\\d*))",
+              "F\\s?\\(\\s?\\d*\\.?(I|l|\\d+)\\s?,\\s?\\d*\\.?\\d+\\s?\\)\\s?[<>=]?\\s?\\d*,?\\d*\\.?\\d+\\s?,\\s?(([^a-z]ns)|(p\\s?[<>=]?\\s?\\d?\\.\\d+e?-?\\d*))",
               txt,
               ignore.case = TRUE
             )[[1]]
@@ -405,7 +405,7 @@ statcheck <-
           # Get location of r-values in text:
           rLoc <-
             gregexpr(
-              "r\\s?\\(\\s?\\d*\\.?\\d+\\s?\\)\\s?[<>=]\\s?[^a-z\\d]{0,3}\\s?\\d*\\.?\\d+\\s?,\\s?(([^a-z]ns)|(p\\s?[<>=]\\s?\\d?\\.\\d+e?-?\\d*))",
+              "r\\s?\\(\\s?\\d*\\.?\\d+\\s?\\)\\s?[<>=]?\\s?[^a-z\\d]{0,3}\\s?\\d*\\.?\\d+\\s?,\\s?(([^a-z]ns)|(p\\s?[<>=]?\\s?\\d?\\.\\d+e?-?\\d*))",
               txt,
               ignore.case = TRUE
             )[[1]]
@@ -536,7 +536,7 @@ statcheck <-
           # Get location of z-values in text:
           zLoc <-
             gregexpr(
-              "[^a-z]z\\s?[<>=]\\s?[^a-z\\d]{0,3}\\s?\\d*,?\\d*\\.?\\d+\\s?,\\s?(([^a-z]ns)|(p\\s?[<>=]\\s?\\d?\\.\\d+e?-?\\d*))",
+              "[^a-z]z\\s?[<>=]?\\s?[^a-z\\d]{0,3}\\s?\\d*,?\\d*\\.?\\d+\\s?,\\s?(([^a-z]ns)|(p\\s?[<>=]?\\s?\\d?\\.\\d+e?-?\\d*))",
               txt,
               ignore.case = TRUE
             )[[1]]
@@ -659,7 +659,7 @@ statcheck <-
           # Get location of chi values or delta G in text:
           chi2Loc <-
             gregexpr(
-              "((\\[CHI\\]|\\[DELTA\\]G)\\s?|(\\s[^trFzQWBnD ]\\s?)|([^trFzQWBnD ]2\\s?))2?\\(\\s?\\d*\\.?\\d+\\s?(,\\s?N\\s?\\=\\s?\\d*\\,?\\d*\\,?\\d+\\s?)?\\)\\s?[<>=]\\s?\\s?\\d*,?\\d*\\.?\\d+\\s?,\\s?(([^a-z]ns)|(p\\s?[<>=]\\s?\\d?\\.\\d+e?-?\\d*))",
+              "((\\[CHI\\]|\\[DELTA\\]G)\\s?|(\\s[^trFzQWBnD ]\\s?)|([^trFzQWBnD ]2\\s?))2?\\(\\s?\\d*\\.?\\d+\\s?(,\\s?N\\s?\\=\\s?\\d*\\,?\\d*\\,?\\d+\\s?)?\\)\\s?[<>=]?\\s?\\s?\\d*,?\\d*\\.?\\d+\\s?,\\s?(([^a-z]ns)|(p\\s?[<>=]?\\s?\\d?\\.\\d+e?-?\\d*))",
               txt,
               ignore.case = TRUE
             )[[1]]
@@ -794,7 +794,7 @@ statcheck <-
           # Get location of Q-values in text:
           QLoc <-
             gregexpr(
-              "Q\\s?-?\\s?(w|within|b|between)?\\s?\\(\\s?\\d*\\.?\\d+\\s?\\)\\s?[<>=]\\s?[^a-z\\d]{0,3}\\s?\\d*,?\\d*\\.?\\d+\\s?,\\s?(([^a-z]ns)|(p\\s?[<>=]\\s?\\d?\\.\\d+e?-?\\d*))",
+              "Q\\s?-?\\s?(w|within|b|between)?\\s?\\(\\s?\\d*\\.?\\d+\\s?\\)\\s?[<>=]?\\s?[^a-z\\d]{0,3}\\s?\\d*,?\\d*\\.?\\d+\\s?,\\s?(([^a-z]ns)|(p\\s?[<>=]?\\s?\\d?\\.\\d+e?-?\\d*))",
               txt,
               ignore.case = TRUE
             )[[1]]
